@@ -3,6 +3,7 @@ FROM  adoptopenjdk/openjdk11:alpine-jre
 
 # copy the packaged jar file into our docker image
 WORKDIR /var/lib/jenkins/workspace/PullCodeFromProductCatalog/product-catalog/target
+RUN ls
 COPY product-catalog-service-0.0.1-SNAPSHOT.jar product-catalog-service.jar
 RUN ls
 # set the startup command to execute the jar
