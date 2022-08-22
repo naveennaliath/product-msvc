@@ -9,7 +9,8 @@ image 'maven:3.5.0'
 }      
 }      
 steps {
-      sh 'cd product-catalog'
+      sh 'pwd'
+      dir('product-catalog') {
       sh 'pwd'
       sh 'mvn clean install'
       }
